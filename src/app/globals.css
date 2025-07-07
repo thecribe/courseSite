@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-width {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+/* BUTTONS */
+
+.primary-button {
+  @apply w-full bg-blue-900 border-2 border-blue-900 text-white py-2 px-10 rounded-4xl tracking-wider cursor-pointer transition-all;
+}
+
+.primary-button:hover {
+  @apply bg-white text-blue-900;
+}
+.outline-button {
+  @apply w-full bg-white border-2 border-blue-900 text-blue-900 py-2 px-10 rounded-4xl tracking-wider cursor-pointer transition-all;
+}
+
+.outline-button:hover {
+  @apply bg-blue-900 text-white;
+}
+
+.categoryMenu:hover {
+  @apply bg-blue-900 text-white;
+}
+
+.categoryMenu:first-child {
+  @apply rounded-l-4xl;
+}
+.categoryMenu:last-child {
+  @apply rounded-r-4xl;
+}
+.categoryCard:hover {
+  @apply border-2 border-blue-300/40 rounded-tr-2xl rounded-bl-2xl;
+}
