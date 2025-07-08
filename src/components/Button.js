@@ -13,6 +13,11 @@ const Button = ({ type, children }) => {
         <button className="outline-button">{children}</button>
       ));
       break;
+    case "cart-outline":
+      return (buttonOutput = (
+        <button className="cart-outline-button">{children}</button>
+      ));
+      break;
 
     default:
       break;
